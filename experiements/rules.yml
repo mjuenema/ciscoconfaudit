@@ -1,0 +1,16 @@
+
+
+rules:
+
+  - name: The name of the rule
+    description: Description of the rule
+    present: single regex or    -> find_objects(present) for each `present` -> must not return []
+    - list of regexes
+    - that must be present
+    absent: single regex or     -> find_objects(absent) for each `absent` -> must return []
+    - list of regexes
+    - that must be absent
+    parent: regex of parent     -> find_objects_w_all_children(parent, '.+') followed by re_search_children()
+    children: single regex or   -> find_objects_w_all_children(parent, children) followed by re_search_children()
+    - list of regexes
+    - to select children 

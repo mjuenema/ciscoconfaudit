@@ -1,0 +1,4 @@
+
+rules:
+  - name: Passwords must be encrypted
+    present: ^service password-encryption
